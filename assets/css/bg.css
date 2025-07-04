@@ -1,0 +1,48 @@
+.section-header {
+    background-color: #c7d2fe;
+}
+
+.dark .section-header {
+    background-color: #111827;
+}
+
+.section-footer {
+    background-color: #c7d2fe;
+}
+
+.dark .section-footer {
+    background-color: #111827;
+}
+
+.section-light {
+    background-color: #e0e7ff;
+}
+
+.dark .section-light {
+    background-color: #1f2937;
+}
+
+.section-dark {
+    background-color: #d4ddff;
+}
+
+.dark .section-dark {
+    background-color: #18202F;
+}
+
+.any-card {
+    background-color: #eef2ff;
+}
+
+.dark .any-card {
+    background-color: #374151;
+}
+
+/* For View all * Back Buttons */
+.button {
+    background-color: #4f46e5;
+}
+
+.button:hover {
+    background-color: #4338ca;
+}

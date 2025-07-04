@@ -1,0 +1,12 @@
+.skill-card {
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+html.dark .skill-card:hover {
+    box-shadow: 0 20px 25px -5px rgba(255, 255, 255, 0.03),
+        0 10px 10px -5px rgba(255, 255, 255, 0.01);
+}

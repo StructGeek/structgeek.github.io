@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Projects | Srimaan</title>
+
+    <link rel="stylesheet" href="../assets/css/tailwind.css">
+
+    <link rel="stylesheet" href="../assets/icons/my-icons/css/srimaan-icons.css">
+
+    <link rel="stylesheet" href="../assets/css/bg.css">
+
+    <link rel="stylesheet" href="../assets/css/repo-card.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="../assets/icons/favicons/projects/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicons/projects/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/icons/favicons/projects/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/icons/favicons/projects/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="GitHub Projects" />
+    <link rel="manifest" href="../assets/icons/favicons/projects/site.webmanifest" />
+
+</head>
+
+<body class="section-header font-sans text-gray-800 dark:text-gray-100">
+
+    <div class="min-h-screen flex flex-col">
+        <!-- Navigation -->
+        <nav class="section-header shadow-md sticky top-0 z-50">
+            <div class="container mx-auto px-6 py-6 flex justify-between items-center">
+                <a class="text-3xl font-bold">GitHub <span class="text-indigo-600">Projects</span></a>
+                <div class="items-center space-x-8 ml-auto">
+                    <button id="dark-mode-toggle"
+                        class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-all"
+                        aria-label="Toggle dark mode">
+                        <span id="moon-icon"><i class="icon icon-moon"></i></span>
+                        <span id="sun-icon" class="hidden"><i class="icon icon-sun"></i></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- Projects Section -->
+        <section class="py-8 section-light flex-grow">
+
+            <div id="projects-section"></div>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="section-footer font-semibold py-4">
+            <div class="container mx-auto px-4 sm:px-6 text-center">
+                <p>© <span id="current-year"></span> Srimaan. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    </script>
+
+    <script src="../assets/js/github-proj.js"></script>
+
+    <script src="../assets/js/dark-mode.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'srimaan';
+    src: url('../fonts/srimaan.woff2') format('woff2'),
+        url('../fonts/srimaan.woff') format('woff'),
+        url('../fonts/srimaan.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class*='icon-']:before {
+    display: inline-block;
+    font-family: 'srimaan';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.icon-bars:before {
+    content: '\0041';
+}
+
+.icon-apartment:before {
+    content: '\0042';
+}
+
+.icon-browser:before {
+    content: '\0043';
+}
+
+.icon-caret-left:before {
+    content: '\0044';
+}
+
+.icon-caret-right:before {
+    content: '\0045';
+}
+
+.icon-chart:before {
+    content: '\0046';
+}
+
+.icon-circle-exclamation:before {
+    content: '\0047';
+}
+
+.icon-code-fork:before {
+    content: '\0048';
+}
+
+.icon-envelope:before {
+    content: '\0049';
+}
+
+.icon-film:before {
+    content: '\004a';
+}
+
+.icon-git:before {
+    content: '\004b';
+}
+
+.icon-github:before {
+    content: '\004c';
+}
+
+.icon-glass:before {
+    content: '\004d';
+}
+
+.icon-graduation-cap:before {
+    content: '\004e';
+}
+
+.icon-image:before {
+    content: '\004f';
+}
+
+.icon-instagram:before {
+    content: '\0050';
+}
+
+.icon-linkedin:before {
+    content: '\0051';
+}
+
+.icon-moon:before {
+    content: '\0052';
+}
+
+.icon-photoshop:before {
+    content: '\0053';
+}
+
+.icon-python:before {
+    content: '\0054';
+}
+
+.icon-ruler:before {
+    content: '\0055';
+}
+
+.icon-star:before {
+    content: '\0056';
+}
+
+.icon-sun:before {
+    content: '\0057';
+}
+
+.icon-table:before {
+    content: '\0058';
+}
+
+.icon-university:before {
+    content: '\0059';
+}

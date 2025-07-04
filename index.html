@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srimaan</title>
+
+    <link rel="stylesheet" href="./assets/css/tailwind.css">
+
+    <link rel="stylesheet" href="./assets/icons/my-icons/css/srimaan-icons.css">
+
+    <link rel="stylesheet" href="./assets/css/bg.css">
+
+    <link rel="stylesheet" href="./assets/css/skills-card.css">
+
+    <link rel="stylesheet" href="./assets/css/repo-card.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="./assets/icons/favicons/index/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicons/index/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/icons/favicons/index/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/favicons/index/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Srimaan" />
+    <link rel="manifest" href="./assets/icons/favicons/index/site.webmanifest" />
+
+    <style>
+        /* Hero Section Gradient */
+        /* Keyframes for gradient animation */
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Light mode gradient background */
+        .gradient-bg {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+        /* Dark mode gradient background */
+        .dark .gradient-bg {
+            background: linear-gradient(-45deg, #4f46e5, #9333ea, #0ea5e9, #10b981);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+
+
+        /* Smooth transitions */
+        .transition-all {
+            transition: all 0.3s ease;
+        }
+
+        /* Mobile menu animation */
+        #mobile-menu {
+            transition: all 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+        }
+
+        #mobile-menu.show {
+            max-height: 500px;
+        }
+    </style>
+</head>
+
+<body class="section-header font-sans transition-colors duration-300 text-gray-800 dark:text-gray-100">
+    <!-- Navigation -->
+    <nav class="section-header shadow-md sticky top-0 z-50">
+        <!-- Navigation Container -->
+        <div class="container mx-auto px-4 sm:px-6 py-4 sm:py-6 flex justify-between items-center">
+
+            <!-- Mobile: Hamburger on the left -->
+            <div class="md:hidden flex items-center space-x-4">
+                <button class="focus:outline-none" id="mobile-menu-button" aria-label="Toggle mobile menu">
+                    <i class="icon icon-bars text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Desktop: Navigation Links -->
+            <div class="hidden md:flex items-center space-x-8 ml-auto">
+                <a href="#about" class="hover:text-indigo-600 transition-all">About</a>
+                <a href="#skills" class="hover:text-indigo-600 transition-all">Skills</a>
+                <a href="#projects" class="hover:text-indigo-600 transition-all">Projects</a>
+                <a href="#contact" class="hover:text-indigo-600 transition-all">Contact</a>
+            </div>
+
+            <!-- Dark Mode Toggle (Always visible on top-right) -->
+            <div class="flex items-center ml-auto md:ml-6">
+                <button id="dark-mode-toggle"
+                    class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-all"
+                    aria-label="Toggle dark mode">
+                    <span id="moon-icon"><i class="icon icon-moon"></i></span>
+                    <span id="sun-icon" class="hidden"><i class="icon icon-sun"></i></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu (shown when hamburger clicked) -->
+        <div class="hidden md:hidden bg-white dark:bg-gray-800 px-4 shadow-lg" id="mobile-menu">
+            <div class="flex flex-col py-2">
+                <a href="#about" class="py-2 px-4 hover:bg-indigo-50 dark:hover:bg-gray-700 rounded">About</a>
+                <a href="#skills" class="py-2 px-4 hover:bg-indigo-50 dark:hover:bg-gray-700 rounded">Skills</a>
+                <a href="#projects" class="py-2 px-4 hover:bg-indigo-50 dark:hover:bg-gray-700 rounded">Projects</a>
+                <a href="#contact" class="py-2 px-4 hover:bg-indigo-50 dark:hover:bg-gray-700 rounded">Contact</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+
+        <div class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center">
+            <!-- Left: Intro and Buttons -->
+            <div
+                class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left space-y-10 mt-10 md:mt-0">
+                <h1 class="text-4xl md:text-6xl font-bold">
+                    Hi, I'm <span class="text-yellow-200">Srimaan</span>
+                </h1>
+                <div class="flex justify-center md:justify-start space-x-4">
+                    <a href="#contact"
+                        class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-100 transition-all">
+                        Contact Me
+                    </a>
+                    <a href="#projects"
+                        class="border-2 border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all">
+                        View Work
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Profile Image -->
+            <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+                <div class="relative">
+                    <div
+                        class="w-64 h-64 md:w-80 md:h-80 bg-white/10 backdrop-blur-sm rounded-full overflow-hidden border-4 border-white/30 flex items-center justify-center">
+                        <img src="./assets/images/pic.jpg" alt="Srimaan" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 section-light scroll-mt-60 md:scroll-mt-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">About <span class="text-indigo-600">Me</span>
+            </h2>
+            <div class="flex flex-col">
+                <div class="w-full">
+                    <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
+                    <p class="text-lg mb-6 text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+                        I’m a Structural Engineer with an M.Tech. in Structural Engineering from IIT Madras, driven by a
+                        passion for blending engineering principles with modern technology.
+                        My goal is to make structural analysis, design, and code compliance more accessible and
+                        efficient for engineers, students, and researchers.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="flex items-center">
+                            <i class="icon icon-envelope text-xl leading-none text-indigo-600 mr-2"></i>
+                            <span>kanna1304@proton.me</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="icon icon-graduation-cap text-2xl leading-none text-indigo-600 mr-2"></i>
+                            <span>Structural Engineering</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="icon icon-university text-xl leading-none text-indigo-600 mr-2"></i>
+                            <span>IIT Madras</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 section-dark scroll-mt-60 md:scroll-mt-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">My <span class="text-indigo-600">Skills</span>
+            </h2>
+
+            <div id="skills-section"></div>
+
+        </div>
+    </section>
+
+    <!-- GitHub Projects Section -->
+    <section id="projects" class="py-20 section-light scroll-mt-60 md:scroll-mt-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">GitHub <span
+                    class="text-indigo-600">Projects</span></h2>
+
+            <div id="projects-section"></div>
+
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 section-dark scroll-mt-60 md:scroll-mt-12">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Get In <span
+                    class="text-indigo-600">Touch</span></h2>
+            <div class="flex flex-col items-center">
+
+                <div class="w-fit mx-auto space-y-8">
+
+
+
+                    <div class="flex items-start space-x-4">
+
+                        <!-- Email Icon (linked) -->
+                        <a href="mailto:kanna1304@proton.me"
+                            class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center transition hover:bg-indigo-200">
+                            <i
+                                class="icon icon-envelope text-indigo-600 text-xl leading-none hover:text-indigo-800 transition"></i>
+                        </a>
+
+                        <!-- Email Text Block -->
+                        <div class="text-left">
+                            <h4 class="font-semibold">Email</h4>
+
+                            <!-- Email ID (linked) with copy popup on hover) -->
+                            <div class="relative inline-block group/email">
+                                <a href="mailto:kanna1304@proton.me"
+                                    class="text-indigo-600 underline-offset-2 hover:underline cursor-pointer peer/email"
+                                    id="email-link" ontouchstart="handleTouchStart(event)"
+                                    ontouchend="handleTouchEnd(event)" ontouchcancel="handleTouchCancel(event)"
+                                    onclick="handleClick(event)" oncontextmenu="return false">
+                                    kanna1304@proton.me
+                                </a>
+
+                                <!-- Copy Popup Tooltip -->
+                                <div id="copy-popup" class="absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs rounded px-2 py-1
+                                            opacity-0 transition pointer-events-auto z-10 duration-200
+                                            group-hover/email:opacity-100 peer-hover/email:opacity-100"
+                                    onclick="copyEmail()" style="cursor: pointer;">
+                                    Copy
+                                </div>
+
+                                <!-- Feedback message -->
+                                <div id="copied-msg" class="absolute -top-10 left-1/2 -translate-x-1/2 bg-green-500 text-white text-xs rounded px-2 py-1
+                                        hidden pointer-events-none z-10">
+                                    Copied!
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Copied Message -->
+                    <p id="copied-msg" class="text-green-600 text-sm mt-2 hidden">Email Copied!</p>
+
+
+
+
+
+                    <div class="flex items-start space-x-4">
+
+                        <!-- Linkedin Icon (linked) -->
+                        <a href="https://www.linkedin.com/in/srimaan-yalla/"
+                            class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center transition hover:bg-indigo-200">
+                            <i
+                                class="icon icon-linkedin text-indigo-600 text-xl leading-none hover:text-indigo-800 transition"></i>
+                        </a>
+
+                        <!-- Linkedin Text Block -->
+                        <div class="text-left">
+                            <h4 class="font-semibold">Linkedin</h4>
+
+                            <!-- Linkedin ID (linked) -->
+                            <div class="relative inline-block group/email">
+                                <a href="https://www.linkedin.com/in/srimaan-yalla/"
+                                    class="text-indigo-600 underline-offset-2 hover:underline cursor-pointer">
+                                    srimaan-yalla
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="flex items-start space-x-4">
+
+                        <!-- Github (linked) -->
+                        <a href="https://github.com/StructGeek"
+                            class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center transition hover:bg-indigo-200">
+                            <i
+                                class="icon icon-github text-indigo-600 text-xl leading-none hover:text-indigo-800 transition"></i>
+                        </a>
+
+                        <!-- Github Text Block -->
+                        <div class="text-left">
+                            <h4 class="font-semibold">GitHub</h4>
+
+                            <!-- Github ID (linked) -->
+                            <div class="relative inline-block group/email">
+                                <a href="https://github.com/StructGeek"
+                                    class="text-indigo-600 underline-offset-2 hover:underline cursor-pointer">
+                                    StructGeek
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="flex items-start space-x-4">
+
+                        <!-- Instagram Icon (linked) -->
+                        <a href="https://www.instagram.com/srimaan_yalla/"
+                            class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center transition hover:bg-indigo-200">
+                            <i
+                                class="icon icon-instagram text-indigo-600 text-xl leading-none hover:text-indigo-800 transition"></i>
+                        </a>
+
+                        <!-- Instagram Text Block -->
+                        <div class="text-left">
+                            <h4 class="font-semibold">Instagram</h4>
+
+                            <!-- instagram ID (linked) -->
+                            <div class="relative inline-block group/email">
+                                <a href="https://www.instagram.com/srimaan_yalla/"
+                                    class="text-indigo-600 underline-offset-2 hover:underline cursor-pointer">
+                                    srimaan_yalla
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="section-footer font-semibold py-4">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <p>© <span id="current-year"></span> Srimaan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    </script>
+
+    <script src="./assets/js/dark-mode.js"></script>
+
+    <script src="./assets/js/menu-nav.js"></script>
+
+    <script src="./assets/js/skills-gen.js"></script>
+
+    <script src="./assets/js/github-proj.js"></script>
+
+    <script src="./assets/js/copy-mail.js"></script>
+
+</body>
+
+</html>
