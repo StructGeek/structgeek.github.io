@@ -103,13 +103,13 @@ function renderButton() {
 
   btnWrapper.innerHTML = showLimited
     ? `<a href="./pages/skills.html" class="inline-block button text-white px-6 py-3 rounded-lg font-semibold hover:-translate-y-1 hover:shadow-xl transition-all">
-          <span class="inline-flex items-center gap-2 transition-all hover:translate-x-1">
-              View All Skills <i class="icon icon-caret-right"></i>
+          <span class="inline-flex gap-2 transition-all hover:translate-x-1">
+              View All Skills <i class="icon icon-caret-right translate-y-0.5"></i>
           </span>
         </a>`
-    : `<a href="../index.html" class="inline-block button text-white px-6 py-3 rounded-lg font-semibold hover:-translate-y-1 hover:shadow-xl transition-all">
-          <span class="inline-flex items-center gap-2 transition-all hover:-translate-x-1">
-              <i class="icon icon-caret-left"></i> Back
+    : `<a href="../index.html#skills" class="inline-block button text-white px-6 py-3 rounded-lg font-semibold hover:-translate-y-1 hover:shadow-xl transition-all">
+          <span class="inline-flex gap-2 -translate-x-1 transition-all hover:-translate-x-2">
+              <i class="icon icon-caret-left translate-y-0.5"></i> Back
           </span>
         </a>`;
 }
